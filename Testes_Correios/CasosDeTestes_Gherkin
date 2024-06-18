@@ -1,0 +1,19 @@
+Caso de teste 1 - Validar se a pagina esta online
+   Dado que estou na tela principal dos correios
+   Quando tiver logado
+   Então o tituli da página será "correios"
+
+Caso de teste 2 - Calcular o frete com as informações válidass
+   Dado que estou na tela principal dos correios
+   Quando inserir as informações válidas no simulador de fretes
+   Então irá direcionar para a página de valores "SEDEX" "PAC"
+
+Caso de teste 03 - Preencher o campo CEP Origem com caracteres alfabético.
+   Dado que estou na tela principal dos correios e vou simular o valor do frete
+   Quando inserir caracteres alfabético no campo CEP de origem
+   Então tera que aparecer a mensagem "Preencha o campo de origem do CEP apenas com números"
+
+Caso de teste 04 - Preencher o campo CEP Destino com caracteres alfabético.
+   Dado que estou na tela principal dos correios e vou simular o valor do frete
+   Quando inserir caracteres alfabético no campo CEP de destino
+   Então tera que aparecer a mensagem "Preencha o campo de destino do CEP apenas com números"   
