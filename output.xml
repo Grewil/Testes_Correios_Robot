@@ -1,0 +1,141 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.3 on win32)" generated="2024-06-19T08:34:59.432858" rpa="false" schemaversion="5">
+<suite id="s1" name="Calcular Frete" source="c:\QAx\projects\Testes_Correios_Robot\Testes_Correios\Calcular_Frete.robot">
+<test id="s1-t1" name="Caso de teste 04 - Preencher o campo CEP Destino com caracteres alfabético." line="63">
+<kw name="New Browser" owner="Browser">
+<msg time="2024-06-19T08:35:02.683516" level="INFO">{"browser": "chromium", "headless": false, "chromiumSandbox": false, "devtools": false, "handleSIGHUP": true, "handleSIGINT": true, "handleSIGTERM": true, "slowMo": 0.0, "timeout": 30000.0, "tracesDir": "C:\\QAx\\projects\\Testes_Correios_Robot\\browser\\traces\\09371651-7819-4cf4-9f18-92e1bbb5b699"}</msg>
+<msg time="2024-06-19T08:35:03.864206" level="INFO">Successfully created browser with options: {"browser":"chromium","headless":false,"chromiumSandbox":false,"devtools":false,"handleSIGHUP":true,"handleSIGINT":true,"handleSIGTERM":true,"slowMo":0,"timeout":30000,"tracesDir":"C:\\QAx\\projects\\Testes_Correios_Robot\\browser\\traces\\09371651-7819-4cf4-9f18-92e1bbb5b699"}</msg>
+<arg>browser=chromium</arg>
+<arg>headless=false</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Create a new playwright Browser with specified options.</doc>
+<status status="PASS" start="2024-06-19T08:35:02.681516" elapsed="1.186689"/>
+</kw>
+<kw name="New Page" owner="Browser">
+<msg time="2024-06-19T08:35:11.420010" level="INFO">Successfully initialized new page object and opened url: https://www.correios.com.br/</msg>
+<msg time="2024-06-19T08:35:11.420010" level="INFO">No context was open. New context was automatically opened when this page is created.</msg>
+<arg>https://www.correios.com.br/</arg>
+<tag>BrowserControl</tag>
+<tag>Setter</tag>
+<doc>Open a new Page.</doc>
+<status status="PASS" start="2024-06-19T08:35:03.913798" elapsed="7.507212"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-06-19T08:35:12.325569" level="INFO">Waited for Element with selector xpath=//h1 at state visible</msg>
+<arg>xpath=//h1</arg>
+<arg>visible</arg>
+<arg>3</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-06-19T08:35:11.571120" elapsed="0.754449"/>
+</kw>
+<kw name="Get Title" owner="Browser">
+<msg time="2024-06-19T08:35:12.976039" level="INFO">Title: 'Correios'</msg>
+<arg>equal</arg>
+<arg>Correios</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns the title of the current page.</doc>
+<status status="PASS" start="2024-06-19T08:35:12.963039" elapsed="0.014001"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-06-19T08:35:12.990039" level="INFO">Fills the text '05160030' in the given field.</msg>
+<arg>id=origem</arg>
+<arg>05160030</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:12.988038" elapsed="0.467860"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-06-19T08:35:13.457898" level="INFO">Fills the text 'sd' in the given field.</msg>
+<arg>id=destino</arg>
+<arg>sd</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:13.456898" elapsed="0.301349"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-06-19T08:35:13.760247" level="INFO">Fills the text '3' in the given field.</msg>
+<arg>id=altura</arg>
+<arg>3</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:13.759246" elapsed="0.220029"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-06-19T08:35:14.205282" level="INFO">Fills the text '10' in the given field.</msg>
+<arg>id=largura</arg>
+<arg>10</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:13.980276" elapsed="0.349260"/>
+</kw>
+<kw name="Fill Text" owner="Browser">
+<msg time="2024-06-19T08:35:14.332535" level="INFO">Fills the text '15' in the given field.</msg>
+<arg>id=comprimento</arg>
+<arg>15</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Clears and fills the given ``txt`` into the text field found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:14.330535" elapsed="0.104435"/>
+</kw>
+<kw name="Click" owner="Browser">
+<msg time="2024-06-19T08:35:14.536378" level="INFO">Clicks the element 'xpath=//*[@data-botao-simular='simular']'.</msg>
+<arg>xpath=//*[@data-botao-simular='simular']</arg>
+<tag>PageContent</tag>
+<tag>Setter</tag>
+<doc>Simulates mouse click on the element found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:14.535378" elapsed="0.293977"/>
+</kw>
+<kw name="Wait For Elements State" owner="Browser">
+<msg time="2024-06-19T08:35:14.874765" level="INFO">Waited for Element with selector xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1] at state visible</msg>
+<arg>xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]</arg>
+<arg>Visible</arg>
+<arg>5</arg>
+<tag>PageContent</tag>
+<tag>Wait</tag>
+<doc>Waits for the element found by ``selector`` to satisfy state option.</doc>
+<status status="PASS" start="2024-06-19T08:35:14.830353" elapsed="0.045413"/>
+</kw>
+<kw name="Get Text" owner="Browser">
+<msg time="2024-06-19T08:35:14.993216" level="INFO">Text: 'Preencha o campo de destino do CEP apenas com números'</msg>
+<arg>xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]</arg>
+<arg>equal</arg>
+<arg>Preencha o campo de destino do CEP apenas com números</arg>
+<tag>Assertion</tag>
+<tag>Getter</tag>
+<tag>PageContent</tag>
+<doc>Returns text attribute of the element found by ``selector``.</doc>
+<status status="PASS" start="2024-06-19T08:35:14.876766" elapsed="0.116450"/>
+</kw>
+<kw name="Take Screenshot" owner="Browser">
+<msg time="2024-06-19T08:35:15.523341" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="browser/screenshot/robotframework-browser-screenshot-1.png" target="_blank"&gt;&lt;img src="browser/screenshot/robotframework-browser-screenshot-1.png" width="800px"/&gt;&lt;/a&gt;</msg>
+<tag>PageContent</tag>
+<doc>Takes a screenshot of the current window or element and saves it to disk.</doc>
+<status status="PASS" start="2024-06-19T08:35:14.993216" elapsed="0.531124"/>
+</kw>
+<status status="PASS" start="2024-06-19T08:35:02.672549" elapsed="12.851791"/>
+</test>
+<doc>Cenários de testes para calcular o frete</doc>
+<status status="PASS" start="2024-06-19T08:34:59.442601" elapsed="17.099961"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="Calcular Frete">Calcular Frete</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
