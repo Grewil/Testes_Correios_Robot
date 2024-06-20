@@ -9,11 +9,33 @@ Caso de teste 2 - Calcular o frete com as informações válidass
    Então irá direcionar para a página de valores "SEDEX" "PAC"
 
 Caso de teste 03 - Preencher o campo CEP Origem com caracteres alfabético.
-   Dado que estou na tela principal dos correios e vou simular o valor do frete
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP origem.
    Quando inserir caracteres alfabético no campo CEP de origem
    Então tera que aparecer a mensagem "Preencha o campo de origem do CEP apenas com números"
 
 Caso de teste 04 - Preencher o campo CEP Destino com caracteres alfabético.
-   Dado que estou na tela principal dos correios e vou simular o valor do frete
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP destino
    Quando inserir caracteres alfabético no campo CEP de destino
    Então tera que aparecer a mensagem "Preencha o campo de destino do CEP apenas com números"   
+
+Caso de teste 05 - Preencher o campo CEP Origem com caracteres numericos inválidos.
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP origem.
+   Quando inserir caracteres numericos inválidos "000000000" no campo CEP de origem
+   Então tera que aparecer a mensagem "O CEP de origem não existe"
+
+Caso de teste 06 - Preencher o campo CEP Origem com 5 dígitos.
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP origem.
+   Quando inserir 5 caracteres numericos no campo CEP de origem e clicar em Calcular Frete
+   Então tera que aparecer a mensagem "Informe o CEP de origem com 8 dígitos"
+
+Caso de teste 07 - Preencher o campo CEP Destino com caracteres numericos inválidos.
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP destino.
+   Quando inserir caracteres numericos inválidos "000000000" no campo CEP de destino
+   Então tera que aparecer a mensagem "O CEP de destino não existe"
+
+Caso de teste 08 - Preencher o campo CEP Destino com 5 dígitos.
+   Dado que estou na tela principal dos correios e vou preencher o campo CEP Destino.
+   Quando inserir 5 caracteres numericos no campo CEP de destino e clicar em Calcular Frete
+   Então tera que aparecer a mensagem "Informe o CEP de destino com 8 dígitos"
+
+   

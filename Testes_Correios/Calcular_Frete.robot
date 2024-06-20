@@ -79,3 +79,71 @@ Caso de teste 04 - Preencher o campo CEP Destino com caracteres alfabético.
   Get text                   xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  equal   Preencha o campo de destino do CEP apenas com números
                                    
   Take Screenshot
+
+Caso de teste 05 - Preencher o campo CEP Origem com caracteres numericos inválidos.
+
+  New Browser    browser=chromium    headless=false 
+  New page       https://www.correios.com.br/
+
+  Wait For Elements State    xpath=//h1     visible   3
+  Get Title                   equal     Correios
+
+  Fill Text    id=origem       00000000
+
+  Click    xpath=//*[@id="altura"]
+
+  Wait For Elements State    xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  Visible   5 
+  Get text                   xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  equal   O CEP de origem não existe
+                                   
+  Take Screenshot
+
+Caso de teste 06 - Preencher o campo CEP Origem com 5 dígitos.
+
+  New Browser    browser=chromium    headless=false 
+  New page       https://www.correios.com.br/
+
+  Wait For Elements State    xpath=//h1     visible   3
+  Get Title                   equal     Correios
+
+  Fill Text    id=origem       05160
+
+  Click    xpath=//*[@id="altura"]
+
+  Wait For Elements State    xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  Visible   5 
+  Get text                   xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  equal   Informe o CEP de origem com 8 dígitos
+                                   
+  Take Screenshot
+
+Caso de teste 07 - Preencher o campo CEP Destino com caracteres numericos inválidos.
+ 
+   New Browser    browser=chromium    headless=false 
+  New page       https://www.correios.com.br/
+
+  Wait For Elements State    xpath=//h1     visible   3
+  Get Title                   equal     Correios
+
+  Fill Text    id=destino       00000000
+
+  Click    xpath=//*[@id="altura"]
+
+  Wait For Elements State    xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  Visible   5 
+  Get text                   xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  equal   O CEP de destino não existe
+                                   
+  Take Screenshot
+
+Caso de teste 08 - Preencher o campo CEP Destino com 5 dígitos.
+
+  New Browser    browser=chromium    headless=false 
+  New page       https://www.correios.com.br/
+
+  Wait For Elements State    xpath=//h1     visible   3
+  Get Title                   equal     Correios
+
+  Fill Text    id=destino       05160
+
+  Click    xpath=//*[@id="altura"]
+
+  Wait For Elements State    xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  Visible   5 
+  Get text                   xpath=//*[@id="portletwrapper-706c6f6e652e666f6f746572706f72746c6574730a636f6e746578740a2f506c6f6e652f686f6d65706167650a63616c63756c61646f7261"]/section/div/nav/form/div[2]/div[3]/div[1]/p[1]  equal   Informe o CEP de destino com 8 dígitos
+                                   
+  Take Screenshot
