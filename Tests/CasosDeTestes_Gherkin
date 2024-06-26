@@ -28,14 +28,47 @@ Caso de teste 06 - Preencher o campo CEP Origem com 5 dígitos.
    Quando inserir 5 caracteres numericos no campo CEP de origem e clicar em Calcular Frete
    Então tera que aparecer a mensagem "Informe o CEP de origem com 8 dígitos"
 
-Caso de teste 07 - Preencher o campo CEP Destino com caracteres numericos inválidos.
+Caso de teste 07 - Preencher o campo CEP Destino com caracteres numéricos inválidos.
    Dado que estou na tela principal dos correios e vou preencher o campo CEP destino.
-   Quando inserir caracteres numericos inválidos "000000000" no campo CEP de destino
+   Quando inserir caracteres numéricos inválidos "000000000" no campo CEP de destino
    Então tera que aparecer a mensagem "O CEP de destino não existe"
 
 Caso de teste 08 - Preencher o campo CEP Destino com 5 dígitos.
    Dado que estou na tela principal dos correios e vou preencher o campo CEP Destino.
-   Quando inserir 5 caracteres numericos no campo CEP de destino e clicar em Calcular Frete
+   Quando inserir 5 caracteres numéricos no campo CEP de destino e clicar em Calcular Frete
    Então tera que aparecer a mensagem "Informe o CEP de destino com 8 dígitos"
 
-   
+Caso de teste 09 - Preencher o campo Altura "A" com medida menor que 1.
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor abaixo de 1 no campo Altura "A"
+   Então será exibida a mensagem "Valor do campo altura está fora dos limites estabelecidos"
+
+Caso de teste 10 - Preencher o campo Altura "A" com medida maior que 100.
+
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor acima de 100 no campo Altura "A"
+   Então será exibida a mensagem "Valor do campo altura está fora dos limites estabelecidos"
+
+Caso de teste 11 - Preencher o campo Largura "L" com medida menor que 8.
+
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor menor que 8 no campo Largura "L"
+   Então será exibida a mensagem "Valor do campo largura está fora dos limites estabelecidos"
+
+Caso de teste 12 - Preencher o campo Largura "L" com medida maior que 100.
+  
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor maior que 100 no campo Largura "L"
+   Então será exibida a mensagem "Valor do campo largura está fora dos limites estabelecidos"
+
+Caso de teste 13 - Preencher o campo Comprimento "C" com a medida menor que 13.
+
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor menor que 13 no campo Comprimento "C"
+   Então será exibida a mensagem "Valor do campo comprimento está fora dos limites estabelecidos"
+
+Caso de teste 14 - Preencher o campo Comprimento "C" com a medida maior que 100.
+
+   Dado que estou na tela principal dos correios
+   Quando inserir um valor maior que 100 no campo Comprimento "C"
+   Então será exibida a mensagem "Valor do campo comprimento está fora dos limites estabelecidos"
